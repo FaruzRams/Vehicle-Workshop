@@ -73,8 +73,8 @@ Agar praktis, buat pintasan (shortcut) di Desktop menuju `index.html`.
 - **Dasbor** menampilkan "Motor dikerjakan" dan "Beban Kerja Mekanik" per orang.
 
 **Cara pelanggan cek motor:** beri tahu pelanggan kode di struk (`INV-…-0001`) atau
-kode booking (`BK-0001` — tampil di halaman Cek Progress & daftar booking).
-Pelanggan cukup mengetik kode tersebut di menu **Cek Progress**; tidak perlu login.
+kode booking (`BK-0001`). Pelanggan membukanya di **`cek.html`** (halaman terpisah,
+tanpa login) atau lewat tautan yang dikirim bengkel lewat WhatsApp.
 
 ---
 
@@ -117,11 +117,13 @@ status motor dan tautan `cek.html?kode=...`. Pelanggan tinggal menekan kirim.
 Nomor HP pelanggan harus diisi lebih dulu (menu Pelanggan, atau otomatis dari Booking).
 
 > **Penting:** `cek.html` membaca data dari browser yang **sama** dengan aplikasi kasir.
-> - Diklik dua kali di komputer bengkel → otomatis sama.
+> - Diklik dua kali di komputer bengkel → otomatis sama, langsung jalan.
 > - Kalau memakai `python -m http.server`, buka `http://127.0.0.1:8765/cek.html`
->   dari komputer yang sama (bukan dari HP, kecuali HP-nya satu jaringan & alamat
->   IP komputer dipakai). Untukuel HP, simpan `cek.html` di lokasi yang bisa diakses
->   (mis. di dalam folder yang di-share/hosting), atau cek via WhatsApp saja.
+>   dari komputer yang sama.
+> - **Dari HP pelanggan sendiri datanya tidak ikut**, karena HP punya penyimpanan
+>   sendiri. Untuk cek lewat HP, simpan `cek.html` di lokasi yang bisa diakses
+>   (mis. folder yang dibagikan atau di-hosting), atau andalkan saja pesan WhatsApp
+>   yang berisi status terkini.
 
 ---
 
