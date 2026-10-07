@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#0b1220">
+  <title>Bengkel Sederhana — Aplikasi Kasir &amp; Manajemen</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🔧</text></svg>">
+</head>
+<body>
+
+  <div class="kerangka">
+
+    <!-- ================= Sidebar ================= -->
+    <aside class="sisi">
+      <div class="merek">
+        <div class="merek-ikon" aria-hidden="true">🔧</div>
+        <div class="merek-teks">
+          <strong id="sisiNama">Bengkel Sederhana</strong>
+          <span>Aplikasi Kasir Internal</span>
+        </div>
+      </div>
+
+      <nav class="navigasi" id="navigasi" aria-label="Menu utama">
+        <button class="nav-item aktif" data-tampilan="dasbor">
+          <span class="nav-ikon">▦</span><span class="nav-teks">Dasbor</span>
+        </button>
+        <button class="nav-item" data-tampilan="kasir">
+          <span class="nav-ikon">🧾</span><span class="nav-teks">Kasir</span>
+        </button>
+        <button class="nav-item" data-tampilan="pelanggan">
+          <span class="nav-ikon">👥</span><span class="nav-teks">Pelanggan</span>
+        </button>
+        <button class="nav-item" data-tampilan="sparepart">
+          <span class="nav-ikon">📦</span><span class="nav-teks">Sparepart</span>
+        </button>
+        <button class="nav-item" data-tampilan="booking">
+          <span class="nav-ikon">📅</span><span class="nav-teks">Booking &amp; Antrian</span>
+        </button>
+        <button class="nav-item" data-tampilan="laporan">
+          <span class="nav-ikon">📈</span><span class="nav-teks">Laporan</span>
+        </button>
+      </nav>
+
+      <div class="sisi-kaki">
+        <button class="kaki-item" id="btnMekanik">
+          <span class="nav-ikon">👷</span><span class="nav-teks">Daftar Mekanik</span>
+        </button>
+        <button class="kaki-item" id="btnLayanan">
+          <span class="nav-ikon">🛠️</span><span class="nav-teks">Daftar Jasa</span>
+        </button>
+        <button class="kaki-item" id="btnPengaturan">
+          <span class="nav-ikon">⚙️</span><span class="nav-teks">Pengaturan</span>
+        </button>
+        <button class="kaki-item" id="btnCadangan">
+          <span class="nav-ikon">💾</span><span class="nav-teks">Cadangan Data</span>
+        </button>
+        <p class="kaki-catatan">Data tersimpan di komputer ini.</p>
+      </div>
+    </aside>
+
+    <!-- ================= Konten utama ================= -->
+    <main class="utama">
+      <header class="kepala">
+        <div class="kepala-judul">
+          <h1 id="judulTampilan">Dasbor</h1>
+          <p id="subTampilan"></p>
+        </div>
+        <div class="kepala-aksi" id="kepalaAksi"></div>
+      </header>
+
+      <div class="konten" id="konten">
+        <section class="tampilan" id="t-dasbor"></section>
+        <section class="tampilan" id="t-kasir" hidden></section>
+        <section class="tampilan" id="t-pelanggan" hidden></section>
+        <section class="tampilan" id="t-sparepart" hidden></section>
+        <section class="tampilan" id="t-booking" hidden></section>
+        <section class="tampilan" id="t-laporan" hidden></section>
+      </div>
+    </main>
+  </div>
+
+  <div id="modalHost"></div>
+  <div id="toastHost" aria-live="polite"></div>
+  <div id="cetakArea"></div>
+
+  <script src="js/utils.js"></script>
+  <script src="js/store.js"></script>
+  <script src="js/ui.js"></script>
+  <script src="js/hitung.js"></script>
+  <script src="js/views/progres.js"></script>
+  <script src="js/views/dasbor.js"></script>
+  <script src="js/views/kasir.js"></script>
+  <script src="js/views/pelanggan.js"></script>
+  <script src="js/views/sparepart.js"></script>
+  <script src="js/views/booking.js"></script>
+  <script src="js/views/laporan.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>

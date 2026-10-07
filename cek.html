@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#0e5b4c">
+  <title>Cek Progress Service — Pelanggan</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🏍️</text></svg>">
+</head>
+<body class="body-pelanggan">
+
+  <div class="pelanggan-kerangka">
+    <header class="pelanggan-kepala">
+      <div class="pelanggan-merek">
+        <div class="merek-ikon" id="merekIkon">🔧</div>
+        <div>
+          <h1 id="namaBengkel">Bengkel</h1>
+          <p id="alamatBengkel">-</p>
+        </div>
+      </div>
+      <p class="pelanggan-tagline">Cek Progress Service Motor Anda</p>
+    </header>
+
+    <main class="pelanggan-isi">
+
+      <form class="kartu pelanggan-kartu" id="formCari">
+        <div class="kartu-isi">
+          <label for="inputKode" class="pelanggan-label">Masukkan kode yang diberikan bengkel</label>
+          <div class="kolom-cari">
+            <div class="cari">
+              <input type="search" id="inputKode" placeholder="BK-0001 atau INV-20261007-0001" autocomplete="off" required>
+            </div>
+            <button class="btn btn-utama" type="submit" id="btnCari">Cek Motor Saya</button>
+          </div>
+          <p class="pelanggan-bantuan">
+            Kode ada di struk / nota yang Anda terima. Bisa juga memakai nomor HP Anda.
+          </p>
+        </div>
+      </form>
+
+      <div id="hasil"></div>
+
+    </main>
+
+    <footer class="pelanggan-kaki">
+      <button class="btn btn-sukses btn-block" id="btnChatBengkel" hidden>💬 Chat Bengkel via WhatsApp</button>
+      <p id="footerBengkel"></p>
+    </footer>
+  </div>
+
+  <div id="toastHost" aria-live="polite"></div>
+
+  <script src="js/utils.js"></script>
+  <script src="js/store.js"></script>
+  <script src="js/views/progres.js"></script>
+  <script src="js/halaman-cek.js"></script>
+</body>
+</html>

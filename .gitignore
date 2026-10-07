@@ -1,0 +1,19 @@
+# Dependency / tooling (proyek ini tanpa build tool, tapi tetap aman bila nanti ditambah)
+node_modules/
+package-lock.json
+npm-debug.log*
+
+# Log & cache
+*.log
+.cache/
+
+# Editor / OS
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Berkas sementara
+*.tmp
+~$*
